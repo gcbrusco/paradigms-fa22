@@ -5,19 +5,33 @@
 		<script type="text/javascript">
 			
 			// Using var vs let vs const
-			var name = 'Jon';
+			// let name = 'Jon';
 
 			function greetUser() {
-			  var name = 'Mark';
-			  console.log(name); 	// (2)
+			  // let name = 'Mark';
+			  // console.log(name); 	// (2)
+			  
+			  if( 1 > 0){
+			  	const API_KEY = 10;
+			  	var y = 11;
+			  	console.log(x);
+			  	if( 2 > 1){
+			  		x = 23;
+			  		console.log(x)
+			  	}
+			  }
+			  
+			  console.log(y);
+
 			}
 
-			console.log(name); 		// (1)
 			greetUser();
-			var name = "Silva";
-			console.log(name); 		// (3)
-			name = "Santos";
-			console.log(name); 		// (4)
+			// console.log(name); 		// (1)
+			// greetUser();
+			// let name = "Silva";
+			// console.log(name); 		// (3)
+			// name = "Santos";
+			// console.log(name); 		// (4)
 		</script>
 	</head>
 	<body>
