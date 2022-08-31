@@ -8,11 +8,19 @@ function sumArray(arr){
 	}
 	return total;
 }
-let arr = [1,2,3,4];
-console.log(`${sumArray(arr)}`);
+let arr = [1,2,3,"4" ];
+// console.log(`${sumArray(arr)}`);
 
 
 // Function expressions
+let sayHi = function(name){
+	console.log("Hello, " + name);
+	
+}
+let a = sayHi;
 
-
+// console.log(a + 2);
+console.log(sayHi);
+console.log(sayHi("Mark"));
+// a("Joanna");
 // Arrow Functions
