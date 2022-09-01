@@ -1,4 +1,4 @@
-// Basic function 
+// DEMO - PART1: BASIC FUNCTION DECLARATION
 // 		- with / without arguments
 // 		- with / without return
 function sumArray(arr){
@@ -12,15 +12,24 @@ let arr = [1,2,3,"4" ];
 // console.log(`${sumArray(arr)}`);
 
 
-// Function expressions
+// DEMO - PART2: FUNCTION EXPRESSIONS
 let sayHi = function(name){
-	console.log("Hello, " + name);
-	
+	console.log("Hello, " + name);	
 }
 let a = sayHi;
 
 // console.log(a + 2);
-console.log(sayHi);
-console.log(sayHi("Mark"));
+// console.log(sayHi);
+// console.log(sayHi("Mark"));
 // a("Joanna");
-// Arrow Functions
+
+// DEMO - PART3: ARROW FUNCTIONS
+
+
+
+// DEMO - PART4: CALLBACK FUNCTIONS
+
+
+
+
+
