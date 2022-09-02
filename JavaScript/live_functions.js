@@ -24,10 +24,24 @@ let a = sayHi;
 // a("Joanna");
 
 // DEMO - PART3: ARROW FUNCTIONS
-
-
+let isEven = n => n % 2 === 0;
+let sum = (a, b) => a + b;
+let min = (a, b) => {
+  	if(a < b) return a;
+	else return b;
+}
 
 // DEMO - PART4: CALLBACK FUNCTIONS
+let add = (a,b) => a + b;
+let multiply = (a,b) => a * b;
+
+function calculate(operation, num1, num2){
+	console.log(`Perfoming ${operation.name}`); 
+	return operation(num1, num2);
+}
+
+console.log(calculate(multiply, 1 , 2))
+
 
 
 
