@@ -16,8 +16,12 @@ console.log(`DEMO1: ${output1}`);	// true
 // The every() method tests whether all elements in the array 
 // pass the test implemented by the provided function. 
 // It returns a Boolean value.
-
-
+function isBelow(x){
+	return x < 40;
+}
+// array1.every(x => x < 40 );
+ let outputDemo = array1.every(x => x < 40 ); //array1.every(isBelow);
+console.log("DEMO1 OUT " + outputDemo);
 
 
 // -------------------------------------------------------------------------
@@ -38,7 +42,7 @@ const words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present']
 // The filter() method creates a new array with all elements that 
 // pass the test implemented by the provided function.
 // It returns a new array with all the filtered elements.
-
+console.log(`DEMO2 :${words.filter((word) => word.length > 6)}`)
 
 
 // -------------------------------------------------------------------------
@@ -57,7 +61,7 @@ const demo3Arr = [1, 4, 9, 16];
 // DEMO3: Array.map(callback[,thisArg])
 // The map() method creates a new array populated with the results of calling a 
 // provided function on every element in the calling array.
-
+console.log("DEMO3: " + demo3Arr.map(x => x * 2));
 
 // -------------------------------------------------------------------------
 // EXAMPLE 4: imperative-style
@@ -78,7 +82,7 @@ let people = [
 // console.log(`DEMO4: ${extractIds(people)}`) // [20, 24, 56, 88]
 
 // DEMO4: Using map to achieve this goal
-
+console.log("DEMO 4: " + people.map( x => x.id))
 // -------------------------------------------------------------------------
 // EXAMPLE 5: imperative-style
 // Sum all numbers in the array
@@ -97,7 +101,8 @@ let demo5Arr = [1, 2, 3, 4];
 // executes a user-supplied "reducer" callback function on each element of the array, 
 // passing in the return value from the calculation on the preceding element. 
 // It returns a single value. 
-
+let reducer = (accumulator, currentValue) => accumulator + currentValue;
+console.log("DEMO5: " +  demo5Arr.reduce(reducer));
 
 
 

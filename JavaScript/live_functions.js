@@ -24,6 +24,7 @@ let a = sayHi;
 // a("Joanna");
 
 // DEMO - PART3: ARROW FUNCTIONS
+// (...) => (expression)
 let isEven = n => n % 2 === 0;
 let sum = (a, b) => a + b;
 let min = (a, b) => {
@@ -31,16 +32,19 @@ let min = (a, b) => {
 	else return b;
 }
 
+// console.log(min(13, 12))
+
 // DEMO - PART4: CALLBACK FUNCTIONS
 let add = (a,b) => a + b;
 let multiply = (a,b) => a * b;
 
 function calculate(operation, num1, num2){
-	console.log(`Perfoming ${operation.name}`); 
+	console.log(`Perfoming ${operation}`); 
 	return operation(num1, num2);
 }
 
 console.log(calculate(multiply, 1 , 2))
+console.log(calculate(add, 1 , 2))
 
 
 
