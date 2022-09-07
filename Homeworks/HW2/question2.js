@@ -40,12 +40,6 @@ function query6(defects){
 }
 
 
-function query7(defects){
-    /* Your implementation here */
-    return /*...*/;    
-}
-/* ... all the other queries */
-
 let defects = loadObjects();
 query1(defects);
 query2(defects);
@@ -53,8 +47,6 @@ query3(defects);
 query4(defects);
 query5(defects);
 query6(defects);
-query7(defects);
-/* ... invocation to all the other query functions ...*/
 
 
 
