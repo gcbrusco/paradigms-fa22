@@ -12,10 +12,8 @@ function fibonacci(n) {
   return total1;
 }
 
-
-
 assert.strictEqual(fibonacci(0), 0);      // OK
 assert.strictEqual(fibonacci(1), 1);      // OK
 assert.strictEqual(fibonacci(2), 1);      // OK
-assert.strictEqual(fibonacci(100), 1);    // OK
-assert.strictEqual(fibonacci(-1), null);  // AssertionError
+assert.strictEqual(fibonacci(100), 354224848179262000000); // OK
+assert.strictEqual(fibonacci(-1), null);  // ❌
