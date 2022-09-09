@@ -4,15 +4,15 @@ var demoFib = require('./demoFibonacci')
 
 
 
-// describe():  Groups tests 
+// describe(groupName, callback):  Groups tests 
 // Arguments
 //    - Test group name
 //    - Callback function
 
-// it(): Defines a test case (e.g., “It should equal X” or “It should log the user in.”)
+// it(testName, callback): Defines a test case (e.g., “It should equal X” or “It should log the user in.”)
 // Arguments
 //    - Test description
-//    - Callback function containing test (with an assertion -- or anything that throws an Error)
+//    - Callback function containing the test (with an assertion -- or anything that throws an Error)
 describe('fibonacci(n)', function() {
   describe('Base recursion cases', function() {
     it('should return 0 when n is 0', function() {
