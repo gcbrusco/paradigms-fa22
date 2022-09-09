@@ -121,5 +121,5 @@ let demo6Arr = [4, 11, 25, 23, 8];
 // console.log(`DEMO6: ${sumOfEvenSquares(demo6Arr)}`); // 80
 
 // DEMO6: combining filter, map, reduce!
-
+console.log("DEMO6" + demo6Arr.filter(x => x % 2 === 0).map(x => x*x).reduce((accumulator, x) => accumulator + x))
 
