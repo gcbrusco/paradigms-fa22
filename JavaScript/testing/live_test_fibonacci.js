@@ -22,8 +22,10 @@ describe('fibonacci(n)', function() {
       assert.equal(demoFib.fibonacci(1), 1);
     });
   });
-  //DEMO1: add another group
+  //DEMO1: add two other groups 
+  // (Group 1: stress-testing, Group 2: malicious user)
   
   //DEMO2: add an alternative assertion using exceptions
+  // throw new Error(...)
   
 });  

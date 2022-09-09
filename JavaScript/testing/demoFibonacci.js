@@ -9,5 +9,3 @@ function fibonacci(n) {
   }
   return total1;
 }
-
-module.exports = {fibonacci}
