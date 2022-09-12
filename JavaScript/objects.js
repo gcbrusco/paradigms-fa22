@@ -31,8 +31,8 @@ let user4 = {
     Alternative syntax: 
     age(): { ... } 
     */
-     
-    /* Improper syntax: (this is not available on arrow functions)
+    /* 
+     Improper syntax: (this is not available on arrow functions)
     age: () => { return new Date().getFullYear() - this.birth_year; } 
     */
     
@@ -88,6 +88,9 @@ Singer.prototype.age = function() {
 	return new Date().getFullYear() - this.birth_year;
 };
 
+Singer.prototype.toString = function(){
+    return `${this.name} (age=${this.age()})`
+}
 
 let singer1 = new Singer("Jacoby Shaddix", 1976);
 let singer2 = new Singer("Avril Lavigne", 1984);
@@ -108,6 +111,9 @@ class Singer2{
 	age() {
 		return new Date().getFullYear() - this.birth_year;
 	} 
+    toString (){
+        return `${this.name} (age=${this.age()})`
+    }
 }
 
 let singer4 = new Singer2("Jacoby Shaddix", 1976);
@@ -122,4 +128,5 @@ console.log(singer6);
 // how do I know my class name?
 console.log(`Object type for singer1 ${singer1.constructor.name}`);
 console.log(`Object type for singer4 ${singer4.constructor.name}`);
+
 
