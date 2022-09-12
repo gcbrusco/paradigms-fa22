@@ -7,24 +7,33 @@ function nextOddNumber(){
 }
 
 function userFunction1(){
+	let nextOddNumber = nextOddNumberGenerator()
 	console.log(`userFunction1 ${nextOddNumber()}`)
 	console.log(`userFunction1 ${nextOddNumber()}`)
 }
 
 function userFunction2(){
+	let nextOddNumber = nextOddNumberGenerator()
 	console.log(`userFunction2 ${nextOddNumber()}`)
 	console.log(`userFunction2 ${nextOddNumber()}`)
 }
 
-// userFunction1()
-// userFunction2()
 
 // DEMO: how to use closures to solve this problem?
+// Explain: IIFE (immediately invoked function expression)
+
+let nextOddNumberGenerator = function () {
+	let innerCounter = 1;
+
+	return () => {
+		let output = innerCounter;
+		innerCounter = innerCounter + 2
+		return output;
+	};
+};
 
 
 
-for(var i = 0 ; i < 3 ; i++){
-	// setTimeout(() => console.log(i),100)
-	let printI = () => console.log(i)
-	printI()
-}
+// console.log(nextOddNumberGenerator())
+userFunction1()
+userFunction2()

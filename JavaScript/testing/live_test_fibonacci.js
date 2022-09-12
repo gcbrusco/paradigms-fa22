@@ -34,7 +34,4 @@ describe('fibonacci(n)', function() {
 		 assert(demoFib.fibonacci(-1) === null) ;
 	  });
   });
-  //DEMO2: add an alternative assertion using exceptions
-  // throw new Error(...)
-  
 });  
