@@ -1,0 +1,5 @@
+0 == "0" because the equality operator converts the operands a string into a number (and vice versa) if they are not the same type.
+This too happens for [] == 0, where the operator converts the operands to their primitive values, which is 0 for [].
+On the other hand "0" == [] outputs false is because neither one is the number 0, which is considered false in boolean logic. 
+In the other examples, the primitive boolean equation is false == false, making the statement true.
+However with "0" == [], the boolean equation is true == false, which makes the statement true, because "0" is truthy while [] is falsy.

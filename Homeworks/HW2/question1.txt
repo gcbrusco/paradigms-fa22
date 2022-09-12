@@ -1,0 +1,3 @@
+The function outputs "undefined" instead of Negative because the comparison function declares the 
+result variable using the keyword "let", which uses block scope. This means that the variable "result"
+only exists in the function block, so when it is returned, the value is set to undefined outside of the scope.

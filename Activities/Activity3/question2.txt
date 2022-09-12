@@ -1,0 +1,2 @@
+The first two outputs of "Ryan" and "Irish" are outputted because Ryan was assigned to child.name and Irish was inherrited from the parent class.
+The last output is undefined because the height attribute was not assigned for the child object.

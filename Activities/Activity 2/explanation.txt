@@ -1,0 +1,8 @@
+The first log statement will print "JCSS" because or statements read from left to right.
+Because it is an "or" statment, when the program reads there is a non-false value, it will automatically make the statement true.
+Therefore, "JCSS" was printed before "Anonymous".
+
+It is a similar case for the second statement.
+If the program is reading an "and" statement, it will automatically make the statement false if the first value is false, and won't read the rest of it.
+Therefore, "Anonymous" was printed because it was the second to be read and the first "JCSS" was also true.
+If "Anonymous" were false, "JCSS" would've been printed.
