@@ -9,7 +9,7 @@ var demoFib = require('./demoFibonacci')
 //    - Test group name
 //    - Callback function
 
-// it(testName, callback): Defines a test case (e.g., “It should equal X” or “It should log the user in.”)
+// it(testName, callback): Defines a test case (e.g., “It should equal X” )
 // Arguments
 //    - Test description
 //    - Callback function containing the test (with an assertion -- or anything that throws an Error)
@@ -24,7 +24,16 @@ describe('fibonacci(n)', function() {
   });
   //DEMO1: add two other groups 
   // (Group 1: stress-testing, Group 2: malicious user)
-  
+  describe("stress-testing", function(){
+	  it("should return 354224848179262000000 when n = 100", function(){
+		 assert(demoFib.fibonacci(100) === 354224848179262000000) ;
+	  });
+  });
+	describe("malicious", function(){
+	  it("should return null when n = -1", function(){
+		 assert(demoFib.fibonacci(-1) === null) ;
+	  });
+  });
   //DEMO2: add an alternative assertion using exceptions
   // throw new Error(...)
   
