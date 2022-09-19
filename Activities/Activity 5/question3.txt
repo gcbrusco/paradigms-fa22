@@ -1,0 +1,2 @@
+greaterThan() is not a higher order function because it doesn't return / take in a function as an argument
+matchesCriteria() is a higher order function because the input is a function as well as the output

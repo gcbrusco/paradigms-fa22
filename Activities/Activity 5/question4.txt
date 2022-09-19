@@ -1,0 +1,5 @@
+Compile vs Transpile:
+Compile converts high-level language to low-level assembly language.
+Transpile converts a high-level language to another high-level language.
+
+Coffee script transpiles to JS because it is merely a "more readable" JS.
