@@ -30,3 +30,6 @@ highEarners = (e.name for e in employees when e.salary > 80000)
 shortNames = (e.name for e in employees when e.name.length < 4) 
 console.log highEarners 	# ['alice', 'dinh', 'ekaterina'] 
 console.log shortNames 	 	# ['bob', 'chi']
+
+
+
