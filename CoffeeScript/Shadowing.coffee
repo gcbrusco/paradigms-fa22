@@ -12,12 +12,13 @@ console.log [a,b,c]
 console.log d
 
 
-person =
-    name: 'Alice'
-    tryToSayHelloButFail: (delay) ->
-        setTimeout (() -> console.log "Hi from #{@name} :("), delay
-    sayHello: (delay) ->
-        setTimeout (() => console.log "Hi from #{@name} :)"),delay
 
-person.tryToSayHelloButFail 1000 # Hi from undefined :(
-person.sayHello 1000 #Hi from Alice :)
+myFunction2 = (a) ->
+    a = 100 # Overwrites parameter a
+    b = 200 # Overwrites global b
+    d = 300 # Local, because there's no d out there
+
+myFunction2()
+console.log [a,b,c]
+
+
