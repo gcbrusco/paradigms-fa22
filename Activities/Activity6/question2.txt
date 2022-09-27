@@ -1,0 +1,20 @@
+Coffee Script Code:
+a = 0 # global
+b = 1 # global
+
+myFunction = (a) ->
+    a = 100 # overwrites global
+    b = 200 # overwrites global
+    d = 300 # local, no d out of function
+    e = 400 # local, no e out of function
+
+
+JavaScript Code:
+var a = 0; // global
+let c = 2; // global
+myFunction = () => {
+     var a = 100;	// local because of "var"
+     b = 200;		// local, no other b out of function
+     var d = 300; 	// local
+     let e = 400; 	// local
+}

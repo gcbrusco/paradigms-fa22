@@ -1,3 +1,3 @@
 matchHouses = (step) -> 
     # Your function implementation here
-    return # a Number
+    return if (step == 0) then 0 else 6 + 5*(step-1);

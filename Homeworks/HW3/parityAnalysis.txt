@@ -1,29 +1,29 @@
 Test Case 1:
 ---
 
-- Input:
-- Output:
+- Input: 25
+- Output: true
 
 Test Case 2:
 ---
 
-- Input:
-- Output:
+- Input: 13
+- Output: false
 
 Test Case 3:
 ---
 
-- Input:
-- Output:
+- Input: 1
+- Output: true
 
 Test Case 4:
 ---
 
-- Input:
-- Output:
+- Input: 10001
+- Output: false
 
 Test Case 5:
 ---
 
-- Input:
-- Output:
+- Input: 12345
+- Output: true

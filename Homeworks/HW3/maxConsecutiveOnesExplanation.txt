@@ -1,0 +1,4 @@
+a) The conditions of the for loop is "i < nums.length - 1" where it will always complete one less
+iterations than the length of the number array, meaning it will not process all of the numbers.
+
+b) To fix this bug, change the "i < nums.length - 1" to "i < nums.length" instead or  to "i <- nums.length - 1"
