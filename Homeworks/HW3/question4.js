@@ -57,3 +57,11 @@ function wordleHelper(state) {
     }
     return potentials;
 }
+
+state = {
+    good_letters: ["L", "E", "G", "I"],
+    bad_letters: ["R", "T", "Y", "O", "P", "A", "S", "D", "H", "C", "X", "M", "K"],
+    correct_letters: [undefined, undefined, undefined, "E", undefined]
+
+}
+console.log(wordleHelper(state))

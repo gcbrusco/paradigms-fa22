@@ -1,0 +1,7 @@
+It is good to have the JS linked before the </body> because the web browser usually executes and parses
+scripts on spot, so it would help render the page faster by putting it on the bottom.
+CSS, on the other hand, is usually put between the <head> tags, so the page is rendered using the CSS
+linked and it loads to be all formatted.
+
+Therefore, with a slow internet connection, the JS might not load immediately after the HTML is rendered, but
+the CSS formatting will, which will make sure the correct format is shown rather than the raw HTML.

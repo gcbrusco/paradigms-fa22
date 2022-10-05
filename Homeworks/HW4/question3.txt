@@ -1,0 +1,8 @@
+The program first creates a new Point, and calls the print1() method,
+which prints out "print1 = (1,2)", then calls innerFn() to print
+"inner in print1 = (1,2)". Then it goes to the print2() method prints
+"print2 = (1,2)" and redeclares innerFn and attempts to print out, but fails
+because there is a TypeError for the redeclaration fo innerFn. 
+This happens because the lexical environment of the first innerFn declaration
+is different than the second declaration, which tries to access the x and y
+variables but can't find them and fail.

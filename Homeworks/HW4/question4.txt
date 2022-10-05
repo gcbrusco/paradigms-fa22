@@ -1,0 +1,10 @@
+An array comprehension is a simple way to create a new array, similar to the "map" function.
+These comprehensions are simple implementations of loop functions and can return the array as a function
+or as a variable.
+
+One example of an array comprehension is:
+Say you have an array of length 5 called "z" and want to create a new array "g" that is 10x each element.
+An array comprehension can complete this task pretty simply: 
+
+z = [1..5] # z = [1,2,3,4,5]
+g = (x*10 for x in z) # Array comprehension: g = [10,20,30,40,50]
