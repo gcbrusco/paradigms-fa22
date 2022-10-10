@@ -1,10 +1,5 @@
-# import statements
-import tkinter 
+import tkinter
 
-# create root window
 top = tkinter.Tk()
 
-# enter the main loop
 top.mainloop()
-
-
