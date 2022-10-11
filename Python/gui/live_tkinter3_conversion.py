@@ -43,5 +43,5 @@ class ConversionWindow:
 if __name__ == '__main__':
 	root = Tk()
 	root.title("Feet to Meters")
-	window = ConversionWindow(root)
+	# window = ConversionWindow(root)
 	root.mainloop()
