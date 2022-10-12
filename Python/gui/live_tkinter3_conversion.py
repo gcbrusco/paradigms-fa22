@@ -2,6 +2,15 @@ from tkinter import *
 from tkinter import messagebox
 
 
+class InfoWindow:
+	def __init__(self, root):
+		self.root = root
+		self.root.title("Formula information")
+		self.label = Label(self.root, text="The formula is to multiply by 0.3048")
+		self.label.pack()
+
+
+
 class ConversionWindow:
 	
 	def convert(self, *args):
@@ -13,7 +22,8 @@ class ConversionWindow:
 			messagebox.showinfo(title="Error!", message= "Please provide a valid number")
 
 	def viewFormula(self, *args):
-		pass
+		self.infoWindow = InfoWindow(Toplevel(self.root))
+
 
 	def __init__(self, root):
 		self.root = root
