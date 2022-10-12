@@ -5,17 +5,19 @@ class CanvasExample:
 	window_width = 500
 	window_height = 500
 	curr_pet = 0
-	def __init__(self):
-		self.root = tk.Tk()
+	def __init__(self, root):
+		self.root = root
 		self.root.title("Canvas Example")
+		
 		# creates the canvas
 		self.canvas = tk.Canvas(self.root, width=self.window_width, height=self.window_height)
 		self.canvas.pack()
+
 		# renders pet on the screen
 		self.pets = [ tk.PhotoImage(file=f"imgs/pea.png"), tk.PhotoImage(file=f"imgs/nash.png"), tk.PhotoImage(file=f"imgs/ravan.png")]
 		self.previous = (0, 0)
-
 		self.pet = self.canvas.create_image(*self.previous, anchor= tk.NW, image=self.pets[self.curr_pet])
+		
 		# register events
 		self.root.bind('<Up>',self.move)   
 		self.root.bind('<Down>',self.move)
@@ -23,8 +25,7 @@ class CanvasExample:
 		self.root.bind('<Right>',self.move)
 		self.root.bind('<Button-2>',self.change_pet)
 		self.root.bind('<B1-Motion>',self.drag)
-		# enters main loop
-		self.root.mainloop()
+		
 	
 	def move(self, event):
 		d = event.keysym # string
@@ -46,5 +47,7 @@ class CanvasExample:
 
 	
 if __name__ == '__main__':
-	app = CanvasExample()
+	root = tk.Tk()
+	app = CanvasExample(root)
+	root.mainloop()
 	
