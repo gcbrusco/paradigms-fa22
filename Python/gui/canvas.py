@@ -15,8 +15,7 @@ class CanvasExample:
 
 		# renders pet on the screen
 		self.pets = [ tk.PhotoImage(file=f"imgs/pea.png"), tk.PhotoImage(file=f"imgs/nash.png"), tk.PhotoImage(file=f"imgs/ravan.png")]
-		self.previous = (0, 0)
-		self.pet = self.canvas.create_image(*self.previous, anchor= tk.NW, image=self.pets[self.curr_pet])
+		self.pet = self.canvas.create_image(0, 0, anchor= tk.NW, image=self.pets[self.curr_pet])
 		
 		# register events
 		self.root.bind('<Up>',self.move)   
@@ -36,10 +35,10 @@ class CanvasExample:
 
 	def drag(self, event):
 		widget = event.widget
+		previous = self.canvas.coords(self.pet)
 		xc = widget.canvasx(event.x) 
 		yc = widget.canvasy(event.y)
-		self.canvas.move(self.pet, xc-self.previous[0], yc-self.previous[1])
-		self.previous = (xc, yc)
+		self.canvas.move(self.pet, xc - previous[0], yc - previous[1])		
 
 	def change_pet(self, event):
 		self.curr_pet = (self.curr_pet + 1) % len(self.pets)
