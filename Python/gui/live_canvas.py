@@ -19,9 +19,34 @@ class CanvasExample:
 
 		# register events
 		self.root.bind("<Up>", self.move)
+		self.root.bind("<Down>", self.move)
+		self.root.bind("<Left>", self.move)
+		self.root.bind("<Right>", self.move)
+		self.root.bind("<Button-2>", self.change)
+		self.root.bind("<B1-Motion>", self.drag)
+
+	def drag(self, event):
+		widget = event.widget
+		xc = widget.canvasx(event.x)
+		yc = widget.canvasy(event.y)
+		previous = self.canvas.coords(self.pet)
+		self.canvas.move(self.pet, xc - previous[0], yc - previous[1])
+
+	def change(self, event):
+		self.curr_pet = (self.curr_pet  + 1) % len(self.pets)
+		self.canvas.itemconfig(self.pet, image=self.pets[self.curr_pet])
+
 
 	def move(self, event):
-		pass
+		d = event.keysym
+		if d == "Right":
+			self.canvas.move(self.pet, 5, 0)
+		if d == "Left":
+			self.canvas.move(self.pet, -5, 0)
+		if d == "Up":
+			self.canvas.move(self.pet, 0, -5)
+		if d == "Down":
+			self.canvas.move(self.pet, 0, 5)
 			
 	
 if __name__ == '__main__':
