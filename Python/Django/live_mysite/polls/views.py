@@ -8,12 +8,19 @@ from .models import Choice, Question
 
 # Feature 1: displays the latest 5 questions
 class IndexView(ListView):
-    pass
+    template_name = "polls/index.html"
+    context_object_name = "questions"
+
+    def get_queryset(self):
+        return Question.objects.order_by("-pub_date")
+
+
 
 
 # Feature 2: displays results for a particular question.
 class ResultsView(DetailView):
-    pass
+    model = Question
+    template_name = "polls/results.html"
 
 
 # Feature 3: displays a question text, with no results but with a form to vote.

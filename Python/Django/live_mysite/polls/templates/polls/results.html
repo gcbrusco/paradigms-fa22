@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>List all questions</title>
+        <title>View question</title>
     </head>
     <body>
         <h1>{{ question.question_text }}</h1>
@@ -16,9 +16,5 @@
             </li>
         {% endfor %}
         </ul>
-
-        <a href="{% url 'polls:detail' question.id %}">
-            Vote again?
-        </a>
     </body>
 </html>
