@@ -1,7 +1,17 @@
 from django.urls import path
-
 from . import views
-app_name = 'polls'  # creates a namespace for this app
+app_name = 'polls'
+
 urlpatterns = [
-    # path('', views.index, name='index'),
+    # ex: /polls/
+    
+    
+    # ex: /polls/5/results/
+    
+    
+    # ex: /polls/5/
+    
+    
+    # ex: /polls/5/vote/
+    
 ]
