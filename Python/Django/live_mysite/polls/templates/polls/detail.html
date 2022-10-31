@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>View question results</title>
+        <title>Vote for question</title>
     </head>
     <body>
         <form action="{% url 'polls:vote' question.id %}" method="post">
@@ -11,7 +11,7 @@
                 <legend>
                     <h1>{{ question.question_text }}</h1>
                 </legend>
-                {% if error_message %}.
+                {% if error_message %}
                     <p><strong>{{ error_message }}</strong></p>
                 {% endif %}
                 {% for choice in question.choice_set.all %}
