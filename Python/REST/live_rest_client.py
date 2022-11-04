@@ -1,17 +1,15 @@
 import requests
+import csv
+
+HOST = "http://localhost:8000"
 
 
 def main():
-	# TODO: make a GET request
-	response = requests.get("http://localhost:8000/bugs")
-	# TODO: parse response
-	print(response.json())
-
-	
-
-
-
-
+	# makes HTTP GET request
+	response = requests.get(f"{HOST}/bugs")
+	# parses the response (.content vs .text vs .json())
+	json_resp = response.json()
+	# TODO: parse bugs 
 
 if __name__ == '__main__':
 	main()
