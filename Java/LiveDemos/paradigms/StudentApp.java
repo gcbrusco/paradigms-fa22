@@ -1,4 +1,5 @@
-
+package paradigms;
+import paradigms.classes.Student;
 public class StudentApp{
 
 	// main method (program's entrypoint)
