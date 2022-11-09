@@ -1,4 +1,3 @@
-package paradigms.classes;
 
 public class Student{
 	private String name;
@@ -18,6 +17,8 @@ public class Student{
      * D = 1 / F = 0
      */
     public float computeGPA(){
+    	
 
+    	
     }
 }

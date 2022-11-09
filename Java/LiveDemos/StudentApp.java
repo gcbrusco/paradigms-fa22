@@ -1,4 +1,3 @@
-package paradigms;
 
 public class StudentApp{
 
