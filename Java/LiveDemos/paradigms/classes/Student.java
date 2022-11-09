@@ -19,6 +19,6 @@ public class Student{
     public float computeGPA(){
     	
 
-    	
+    	return 0;
     }
 }
