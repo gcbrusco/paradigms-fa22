@@ -2,7 +2,7 @@ package paradigms.shapes;
 public class ShapesApp {
 	public static void main(String[] args) {
 		// an array of shapes, why does it work?
-		Shape [] shapes = 	new Shapes[]{
+		Shape [] shapes = 	new Shape[]{
 			new Rectangle(2,3),
 			new Circle(4),
 			new Triangle(4,5)

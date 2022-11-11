@@ -1,5 +1,5 @@
 package paradigms.shapes;
-public class OrthogonalShape implements Shape{
+public abstract class OrthogonalShape implements Shape{
 	protected double base;
 	protected double height;
 
