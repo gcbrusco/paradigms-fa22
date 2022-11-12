@@ -12,8 +12,11 @@ public class ShapesApp {
 		for(Shape s: shapes){
 			System.out.println(s.calculateArea());
 			// TODO: check runtime type
+			if(s instanceof Circle)
+				System.out.println(" It is a circle!");
 
 			// TODO: print the object (toString())
+			System.out.println(s);
 		}
 
 	}
