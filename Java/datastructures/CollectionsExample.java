@@ -26,5 +26,17 @@ public class CollectionsExample{
 		for(String element: mySet){}
 
         
+        // playing around with primitive wrappers
+        int a = 2;
+        Integer b = a;
+        // list of primitives (ex: int)
+        List<Integer> myIntList = new ArrayList<>();
+        myIntList.add(a);
+
+        // list of floats
+        List<Float> myFloatList = new ArrayList<>();
+
+        
+
     }
 }
