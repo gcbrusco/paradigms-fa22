@@ -8,4 +8,8 @@ public class Rectangle extends OrthogonalShape{
 	public double calculateArea() {
 		return this.base * this.height;
 	}
+
+	public String toString(){
+		return "Rectangle. base="+base+ "height="+this.height;  
+	}
 }
