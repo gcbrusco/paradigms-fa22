@@ -38,33 +38,3 @@ public class PrintTask implements Runnable {
     } // end method run
 } // end class PrintTask
 
-class MainPrintTask {
-    public static void main(String[] args) {
-        try {
-            Thread t1 = new Thread(new PrintTask("task1"));
-            Thread t2 = new Thread(new PrintTask("task2"));
-            System.out.println("Starting the two threads");
-            t1.start();
-            t2.start();
-            System.out.println("Prints right away");
-            t1.join();
-            t2.join(); // waits for the threads to die.
-            System.out.println("Prints after all threads finished");
-        } catch (InterruptedException e) {
-            System.out.println(e.getMessage());
-        }
-    }
-
-//    public static void main(String[] args) {
-//
-//        Thread t1 = new Thread(new PrintTask("task1"));
-//        Thread t2 = new Thread(new PrintTask("task2"));
-//        System.out.println("Starting the executor");
-//        ExecutorService threadExecutor = Executors.newCachedThreadPool();
-//        threadExecutor.execute(t1);
-//        threadExecutor.execute(t2);
-//        threadExecutor.shutdown(); // it does not accept any more jobs & waits for the threads to finish.
-//        System.out.println("End main");
-//
-//    }
-}

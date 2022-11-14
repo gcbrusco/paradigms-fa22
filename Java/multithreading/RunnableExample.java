@@ -2,6 +2,12 @@ package multithreading;
 
 public class RunnableExample implements Runnable {
 
+    @Override
+    public void run() {
+        System.out.println("Inside : " + Thread.currentThread().getName());
+    }
+
+
     public static void main(String[] args) {
         System.out.println("Inside : " + Thread.currentThread().getName());
 
@@ -15,8 +21,5 @@ public class RunnableExample implements Runnable {
         thread.start();
     }
 
-    @Override
-    public void run() {
-        System.out.println("Inside : " + Thread.currentThread().getName());
-    }
+    
 }
