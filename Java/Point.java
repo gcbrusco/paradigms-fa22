@@ -1,7 +1,11 @@
-
 public class Point {
     private int x;
     private int y;
+
+    public Point(int x, int y){
+        this.x = x;
+        this.y = y;
+    }
 
     @Override
     public boolean equals(Object other){
@@ -20,8 +24,12 @@ public class Point {
 
     @Override
     public int hashCode(){
-        int hash = 41 + x;
-        hash = 41 * hash + y;
+        int varCodeX = x;
+        int varCodeY = y;
+        // inits hash with the var code for one of the fields
+        int hash = varCodeX;
+        //  hash = <prime number> * hash + var_code;
+        hash = 41 * hash + varCodeY;
         return hash;
     }
 
@@ -29,21 +37,5 @@ public class Point {
     public String toString() {
         return "[" + x + ", " + y + "]";
     }
-
-    public static void main(String[] args) {
-        Point p1 = new Point(1,2);
-        Point p2 = new Point(1,2);
-        Point p3 = new Point(3,4);
-
-
-        System.out.println("p1 == p2 ? " + (p1 == p2));
-        System.out.println("p1.equals(p2) ? " + p1.equals(p2));
-        System.out.println("p2.equals(p3) ? " + p2.equals(p3));
-
-        System.out.println(p1.hashCode());
-
-        System.out.print(p1);
-    }
-
 
 }
