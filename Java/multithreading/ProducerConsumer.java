@@ -64,5 +64,6 @@ public class ProducerConsumer {
         executor.execute(p);
 		executor.execute(c1);
         executor.execute(c2);
+        executor.shutdown();
     }
 }
