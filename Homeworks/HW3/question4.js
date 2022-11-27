@@ -59,9 +59,9 @@ function wordleHelper(state) {
 }
 
 state = {
-    good_letters: ["L", "E", "G", "I"],
-    bad_letters: ["R", "T", "Y", "O", "P", "A", "S", "D", "H", "C", "X", "M", "K"],
-    correct_letters: [undefined, undefined, undefined, "E", undefined]
+    good_letters: ["I", "N"],
+    bad_letters: ["T", "R", "A"],
+    correct_letters: [undefined, undefined, undefined, "I", "N"]
 
 }
 console.log(wordleHelper(state))

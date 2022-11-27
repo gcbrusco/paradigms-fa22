@@ -1,0 +1,40 @@
+How would you break down your program into classes?
+Create a class diagram showing the classes and their
+attributes as well as methods. Clearly differentiate between
+static/instance methods/attributes (if any)
+
+
+I would break it down into classes by having a main TicTac board class, 
+then a bunch of methods describing the user's turn and computers's turn.
+EX: (pseudocode)
+
+class Board:
+    var board = [[-1,-1,-1], [-1,-1,-1], [-1,-1,-1]]
+
+    def usersTurn(x, y):
+        board[x][y] = 1
+    
+    def computersTurn:
+        x = rand(0,2)
+        y = rand(0,2)
+        while board[x][y] != -1:
+            x = rand(0,2)
+            y = rand(0,2)
+        board[x][y] = 0
+
+    def checkWinner:
+        for row in board:
+            if row = [0,0,0]:
+                computer win 
+            elif row = [1,1,1]:
+                user win 
+        for col in board:
+            if col = [0,0,0]:
+                computer win 
+            elif col = [1,1,1]:
+                user win 
+        for diag in board:
+            if diag = [0,0,0]:
+                computer win 
+            elif diag = [1,1,1]:
+                user win 
