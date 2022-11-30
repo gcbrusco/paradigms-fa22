@@ -9,11 +9,13 @@ URL = "http://localhost:51017/"
 
 # parses the list of bugs
 def parse_bugs(bugs, csv_writer):
+    # go through all of the bugs and parse through
     count = {}
     for bug in bugs:
         b = bug['package']
         count[b] = count.get(b, 0) + 1
 
+    #write to file
     csv_writer.writerow(["package","total"])
     for key, value in count.items():
         csv_writer.writerow([key,value])
@@ -22,11 +24,13 @@ def parse_bugs(bugs, csv_writer):
 
 # parses the list of bugs
 def parse_comments(comments, csv_writer):	
+    # go through all of the comments and parse through
     count = {}
     for comment in comments:
         bug_id = comment['bug'][28:33]
         count[bug_id] = count.get(bug_id, 0) + 1
         
+    # write to file
     csv_writer.writerow(["bug_id","total"])
     for key, value in count.items():
         csv_writer.writerow([key, value])
